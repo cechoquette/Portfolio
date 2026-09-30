@@ -1,59 +1,87 @@
-# Portfolio
+# Catherine Choquette — Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.0.
+A personal software engineering portfolio built with Angular.
 
-## Development server
+The site is designed to be minimal, bilingual, and intentionally restrained, with a focus on clear structure, typography, and selected technical work rather than visual clutter.
 
-To start a local development server, run:
+## Stack
 
-```bash
-ng serve
+- Angular 21+
+- TypeScript
+- SCSS
+- Angular Router
+- Transloco
+- GitHub
+- Azure Static Web Apps
+
+## Current Structure
+
+```text
+src/
+├── app/
+│   ├── core/
+│   │   └── layout/
+│   │       ├── header/
+│   │       └── footer/
+│   ├── pages/
+│   │   ├── home/
+│   │   ├── projects/
+│   │   ├── about/
+│   │   └── contact/
+│   ├── app.ts
+│   ├── app.html
+│   ├── app.scss
+│   ├── app.routes.ts
+│   └── app.config.ts
+├── styles.scss
+├── index.html
+└── main.ts
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Design Direction
 
-## Code scaffolding
+The visual system is intentionally sparse.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The goal is an editorial, high-end feel built around:
 
-```bash
-ng generate component component-name
+- generous negative space
+- restrained typography
+- minimal navigation
+- subtle borders and colour
+- selective use of photography
+- no decorative animation or unnecessary visual noise
+
+The homepage acts as a quiet entry point rather than a full one-page portfolio. Projects, background, and contact information are handled through dedicated routes.
+
+## Internationalization
+
+The site is being built with English and French support from the start using Transloco.
+
+Planned structure:
+
+```text
+src/assets/i18n/
+├── en.json
+└── fr.json
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+A small `EN / FR` language control will be added to the interface.
 
-```bash
-ng generate --help
-```
+## Planned Pages
 
-## Building
+- Home
+- Projects
+- About
+- Contact
 
-To build the project run:
+Individual project case studies will be added under the Projects section as the portfolio grows.
 
-```bash
-ng build
-```
+## Deployment
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The site is intended to be deployed through GitHub to Azure Static Web Apps with a custom domain.
 
-## Running unit tests
+## Status
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Early development.
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The application shell, routing, core layout, and initial visual foundation are in place. Content, project case studies, responsive refinements, internationalization, and deployment are still being built.
